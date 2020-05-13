@@ -5,6 +5,12 @@ using System.Windows.Input;
 using Uno.UI.Common;
 using DelegateCommand = Uno.UI.Common.DelegateCommand;
 
+#if HAS_UNO
+using ICommand = System.Windows.Input.ICommand;
+#else
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+#endif
+
 namespace Uno.UI.Samples.Content.UITests.CommandBar
 {
 	public class CommandBarCommandViewModel

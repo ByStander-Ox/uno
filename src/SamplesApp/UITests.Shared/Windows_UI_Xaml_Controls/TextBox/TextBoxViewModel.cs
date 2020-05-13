@@ -8,6 +8,12 @@ using Windows.UI.Core;
 using System.Windows.Input;
 using Uno.UI.Common;
 
+#if HAS_UNO
+using ICommand = System.Windows.Input.ICommand;
+#else
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+#endif
+
 namespace Uno.UI.Samples.Presentation.SamplePages
 {
 	public class TextBoxViewModel : ViewModelBase

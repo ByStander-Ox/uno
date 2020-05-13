@@ -15,6 +15,12 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+#if HAS_UNO
+using ICommand = System.Windows.Input.ICommand;
+#else
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+#endif
+
 namespace UITests.Shared.Windows_UI_Xaml_Controls.ContentDialogTests
 {
 	[SampleControlInfo("ContentDialog", "ContentDialog_Simple")]

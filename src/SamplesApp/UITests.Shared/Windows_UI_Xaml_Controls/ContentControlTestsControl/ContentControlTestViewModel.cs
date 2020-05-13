@@ -23,6 +23,12 @@ using Uno.UI.Common;
 using System.Windows.Input;
 using Windows.UI.Core;
 
+#if HAS_UNO
+using ICommand = System.Windows.Input.ICommand;
+#else
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+#endif
+
 namespace Uno.UI.Samples.Presentation.SamplePages
 {
 	public class ContentControlTestViewModel : ViewModelBase

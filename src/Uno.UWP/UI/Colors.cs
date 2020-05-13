@@ -1,7 +1,7 @@
-﻿#if !SILVERLIGHT
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Windows.UI;
 
 namespace Windows.UI
 {
@@ -260,4 +260,3 @@ namespace Windows.UI
 		public static readonly Color YellowGreen = FromInteger(unchecked((int)0xFF9ACD32));
 	}
 }
-#endif

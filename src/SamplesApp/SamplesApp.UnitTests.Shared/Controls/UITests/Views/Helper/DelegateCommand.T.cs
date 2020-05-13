@@ -1,6 +1,14 @@
 ﻿#if NETFX_CORE
 using System;
-using System.Windows.Input;
+using Windows.UI.Xaml.Input;
+
+#if HAS_UNO_WINUI
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+using EventHandler = System.EventHandler<object>;
+#else
+using ICommand = System.Windows.Input.ICommand;
+using EventHandler;
+#endif
 
 namespace Uno.UI.Common
 {
@@ -9,7 +17,7 @@ namespace Uno.UI.Common
 		private Action<T> _action;
 		private bool _canExecuteEnabled = true;
 
-		public event EventHandler CanExecuteChanged;
+		public event EventHandler<object> CanExecuteChanged;
 
 		public DelegateCommand(Action<T> action)
 		{

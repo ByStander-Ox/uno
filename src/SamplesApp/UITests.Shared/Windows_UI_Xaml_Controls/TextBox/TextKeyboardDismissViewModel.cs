@@ -8,6 +8,12 @@ using Uno.UI.Common;
 using Uno.UI.Samples.UITests.Helpers;
 using Windows.UI.Core;
 
+#if HAS_UNO
+using ICommand = System.Windows.Input.ICommand;
+#else
+using ICommand = Windows.UI.Xaml.Input.ICommand;
+#endif
+
 namespace Uno.UI.Samples.Presentation.SamplePages
 {
 	public class TextKeyboardDismissViewModel : ViewModelBase

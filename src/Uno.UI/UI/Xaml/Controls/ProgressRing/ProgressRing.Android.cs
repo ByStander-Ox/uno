@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml;
 
 namespace Windows.UI.Xaml.Controls
 {
